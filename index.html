@@ -4,90 +4,253 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estimasi Biaya Kegiatan Mahasiswa</title>
+
     <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
         body{
             font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-            margin: 0;
+            background:#f4f6f9;
         }
 
         header{
-            background-color: #0078D4;
-            color: white;
-            text-align: center;
-            padding: 30px;
+            background: linear-gradient(135deg,#0078D4,#005A9E);
+            color:white;
+            text-align:center;
+            padding:50px 20px;
+        }
+
+        header h1{
+            font-size:40px;
+            margin-bottom:10px;
         }
 
         .container{
-            width: 80%;
-            margin: 30px auto;
+            width:90%;
+            max-width:1100px;
+            margin:30px auto;
         }
 
         .card{
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background:white;
+            padding:25px;
+            border-radius:15px;
+            margin-bottom:25px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);
         }
 
         h2{
-            color: #0078D4;
+            color:#0078D4;
+            margin-bottom:15px;
+        }
+
+        p{
+            margin-bottom:10px;
+            line-height:1.6;
         }
 
         ul{
-            line-height: 1.8;
+            padding-left:20px;
+            line-height:1.8;
+        }
+
+        .harga-container{
+            display:flex;
+            gap:20px;
+            flex-wrap:wrap;
+        }
+
+        .harga-card{
+            flex:1;
+            min-width:200px;
+            background:#eef6ff;
+            text-align:center;
+            padding:20px;
+            border-radius:10px;
+        }
+
+        .harga-card h3{
+            color:#0078D4;
+            margin-bottom:10px;
+        }
+
+        .harga-card p{
+            font-size:22px;
+            font-weight:bold;
+        }
+
+        label{
+            display:block;
+            margin-top:10px;
+            margin-bottom:5px;
+            font-weight:bold;
+        }
+
+        input, select{
+            width:100%;
+            padding:10px;
+            border:1px solid #ccc;
+            border-radius:8px;
+        }
+
+        button{
+            margin-top:20px;
+            width:100%;
+            padding:12px;
+            background:#0078D4;
+            color:white;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:#005A9E;
+        }
+
+        #hasil{
+            margin-top:20px;
+            padding:15px;
+            background:#eef6ff;
+            border-radius:10px;
+            display:none;
+        }
+
+        footer{
+            background:#222;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
         }
     </style>
 </head>
 <body>
+
 <header>
     <h1>Estimasi Biaya Kegiatan Mahasiswa</h1>
-    <p>Mini Project Azure Serverless</p>
+    <p>Mini Project Azure Serverless Computing</p>
 </header>
 
 <div class="container">
 
     <div class="card">
-        <h2>Identitas Praktikum</h2>
-        <p><strong>Mata Kuliah :</strong> Komputasi Awan</p>
-        <p><strong>Topik :</strong> Azure Serverless Computing</p>
+        <h2>📘 Identitas Praktikum</h2>
+        <p><strong>Mata Kuliah:</strong> Komputasi Awan</p>
+        <p><strong>Topik:</strong> Azure Serverless Computing</p>
     </div>
 
     <div class="card">
-        <h2>Identitas Mahasiswa</h2>
-        <p><strong>Nama :</strong> Fasya Ghaida Finandhita</p>
-        <p><strong>NIM :</strong> 0920240008</p>
-        <p><strong>Program Studi :</strong> Teknologi Rekayasa Perangkat Lunak</p>
+        <h2>👩‍🎓 Identitas Mahasiswa</h2>
+        <p><strong>Nama:</strong> Fasya Ghaida Finandhita</p>
+        <p><strong>NIM:</strong> 0920240008</p>
+        <p><strong>Program Studi:</strong> Teknologi Rekayasa Perangkat Lunak</p>
     </div>
 
     <div class="card">
-        <h2>Deskripsi Sistem</h2>
+        <h2>📋 Deskripsi Sistem</h2>
         <p>
             Sistem ini digunakan untuk membantu panitia kegiatan mahasiswa
-            dalam menghitung estimasi biaya konsumsi berdasarkan jumlah
-            peserta dan jenis konsumsi yang dipilih.
+            dalam menghitung estimasi biaya konsumsi berdasarkan jumlah peserta
+            dan jenis konsumsi yang dipilih.
         </p>
     </div>
 
     <div class="card">
-        <h2>Daftar Harga Konsumsi</h2>
-        <ul>
-            <li>Snack : Rp15.000 / peserta</li>
-            <li>Makan : Rp30.000 / peserta</li>
-            <li>Lengkap : Rp45.000 / peserta</li>
-        </ul>
+        <h2>🍽 Daftar Harga Konsumsi</h2>
+
+        <div class="harga-container">
+            <div class="harga-card">
+                <h3>Snack</h3>
+                <p>Rp15.000</p>
+            </div>
+
+            <div class="harga-card">
+                <h3>Makan</h3>
+                <p>Rp30.000</p>
+            </div>
+
+            <div class="harga-card">
+                <h3>Lengkap</h3>
+                <p>Rp45.000</p>
+            </div>
+        </div>
     </div>
 
     <div class="card">
-        <h2>Layanan Azure yang Digunakan</h2>
+        <h2>🧮 Hitung Estimasi Biaya</h2>
+
+        <label>Jumlah Peserta</label>
+        <input type="number" id="jumlah" placeholder="Masukkan jumlah peserta">
+
+        <label>Jenis Konsumsi</label>
+        <select id="jenis">
+            <option value="snack">Snack</option>
+            <option value="makan">Makan</option>
+            <option value="lengkap">Lengkap</option>
+        </select>
+
+        <button onclick="hitungBiaya()">
+            Hitung Estimasi
+        </button>
+
+        <div id="hasil"></div>
+    </div>
+
+    <div class="card">
+        <h2>☁ Layanan Azure yang Digunakan</h2>
         <ul>
             <li>Azure Static Web Apps (Frontend)</li>
             <li>Azure Functions (Backend API)</li>
+            <li>Azure App Service</li>
+            <li>Azure Container Apps</li>
             <li>GitHub Repository</li>
             <li>GitHub Actions</li>
         </ul>
     </div>
+
 </div>
+
+<footer>
+    Mini Project Azure Serverless - Fasya Ghaida Finandhita (0920240008)
+</footer>
+
+<script>
+function hitungBiaya() {
+
+    const jumlah = parseInt(document.getElementById("jumlah").value);
+    const jenis = document.getElementById("jenis").value;
+
+    if(!jumlah || jumlah <= 0){
+        alert("Masukkan jumlah peserta yang valid");
+        return;
+    }
+
+    const harga = {
+        snack: 15000,
+        makan: 30000,
+        lengkap: 45000
+    };
+
+    const total = jumlah * harga[jenis];
+
+    document.getElementById("hasil").style.display = "block";
+
+    document.getElementById("hasil").innerHTML = `
+        <h3>Hasil Estimasi</h3>
+        <br>
+        <p><strong>Jumlah Peserta:</strong> ${jumlah}</p>
+        <p><strong>Jenis Konsumsi:</strong> ${jenis}</p>
+        <p><strong>Harga per Peserta:</strong> Rp ${harga[jenis].toLocaleString('id-ID')}</p>
+        <p><strong>Total Biaya:</strong> Rp ${total.toLocaleString('id-ID')}</p>
+    `;
+}
+</script>
+
 </body>
 </html>
