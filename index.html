@@ -1,19 +1,93 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>Praktikum Azure Static Web Apps</title>
-<style>
-body { font-family: Arial; margin: 40px; background: #f4f6f8; }
-.container { background: white; padding: 24px; border-radius: 12px; } h1 { color: #1f4e79; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimasi Biaya Kegiatan Mahasiswa</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+        }
+
+        header{
+            background-color: #0078D4;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container{
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        .card{
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2{
+            color: #0078D4;
+        }
+
+        ul{
+            line-height: 1.8;
+        }
+    </style>
 </head>
 <body>
+<header>
+    <h1>Estimasi Biaya Kegiatan Mahasiswa</h1>
+    <p>Mini Project Azure Serverless</p>
+</header>
+
 <div class="container">
-<h1>Praktikum Azure Static Web Apps</h1>
-<p>Halaman ini berhasil di-deploy menggunakan Azure Static Web Apps.</p>
-<p>Layanan: Azure Static Web Apps</p>
-<p>Deployment: GitHub Repository</p>
+
+    <div class="card">
+        <h2>Identitas Praktikum</h2>
+        <p><strong>Mata Kuliah :</strong> Komputasi Awan</p>
+        <p><strong>Topik :</strong> Azure Serverless Computing</p>
+    </div>
+
+    <div class="card">
+        <h2>Identitas Mahasiswa</h2>
+        <p><strong>Nama :</strong> Nama Kamu</p>
+        <p><strong>NIM :</strong> NIM Kamu</p>
+        <p><strong>Program Studi :</strong> Teknologi Rekayasa Perangkat Lunak</p>
+    </div>
+
+    <div class="card">
+        <h2>Deskripsi Sistem</h2>
+        <p>
+            Sistem ini digunakan untuk membantu panitia kegiatan mahasiswa
+            dalam menghitung estimasi biaya konsumsi berdasarkan jumlah
+            peserta dan jenis konsumsi yang dipilih.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Daftar Harga Konsumsi</h2>
+        <ul>
+            <li>Snack : Rp15.000 / peserta</li>
+            <li>Makan : Rp30.000 / peserta</li>
+            <li>Lengkap : Rp45.000 / peserta</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Layanan Azure yang Digunakan</h2>
+        <ul>
+            <li>Azure Static Web Apps (Frontend)</li>
+            <li>Azure Functions (Backend API)</li>
+            <li>GitHub Repository</li>
+            <li>GitHub Actions</li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>
